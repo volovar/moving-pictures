@@ -19,11 +19,11 @@ const babelLoader = {
  * Base configuration for the CLI, core, and examples.
  */
 
-module.exports = {
-  mode: "development",
+module.exports = (env = {}) => ({
+  mode: env.production ? "production" : "development",
   entry: "./src/index.js", // Default for boilerplate generation.
   output: {
-    path: path.resolve("dist"),
+    path: path.resolve(__dirname, env.production ? "dist" : "build"),
     filename: "deck.js",
   },
   devtool: "source-map",
@@ -58,4 +58,4 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
-};
+});

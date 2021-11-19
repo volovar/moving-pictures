@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack",
+    "dist": "webpack --env.production",
     "start": "CHOKIDAR_USEPOLLING=true webpack-dev-server --hot"
   },
   "dependencies": {
