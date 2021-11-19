@@ -8,7 +8,7 @@ const VideoSlide = ({ src, title, videoOptions = {} }) => (
     </Text>
 
     <video
-      style={{ outline: "none", maxWidth: "100%", minHeight: "80%", margin: "0 auto" }}
+      style={{ outline: "none", height: "80%", maxWidth: "100%", margin: "0 auto" }}
       controls
       {...videoOptions}
     >
